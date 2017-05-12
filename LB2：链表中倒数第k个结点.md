@@ -11,16 +11,13 @@
 //对于特殊的输入和特殊情况一定要做处理，否则无法通过相应得测试用例
 public class Solution {
     public ListNode FindKthToTail(ListNode head,int k) {
-        
         //定义两个指针
         ListNode ppre=head;
         ListNode plast=head;
-        
         //鲁棒性：输入值要符合要求
         if(k<=0||head==null){
            return null;
-        }
-        
+        }   
         //指针ppre先走k-1
         for(int i=1;i<=k-1;i++){
             ppre=ppre.next;
@@ -39,6 +36,3 @@ public class Solution {
     }
 }
 ```
-
-
-
